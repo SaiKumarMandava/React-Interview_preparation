@@ -16,6 +16,8 @@ import { useState } from 'react';
 import DisplayCount from './components/displayCount';
 import CenterDiv from './components/centerDiv';
 import Form from './components/customHooks/form';
+import Sedg from './components/s';
+import CountryStaes from './components/countryStaes';
 function App() {
 
   const [count,setCount]= useState(1)
@@ -96,6 +98,12 @@ function App() {
   </div>
 <div className='bbb'>
 <Form/>
+</div>
+<div className='bbb'>
+<Sedg/>
+</div>
+<div className='bbb'>
+<CountryStaes/>
 </div>
     </div>
     </div>

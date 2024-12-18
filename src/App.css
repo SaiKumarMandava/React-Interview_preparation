@@ -44,6 +44,9 @@
     font-size: 20px;
     
   }
+  .country :where(h1){
+    font-size: 20px;
+  }
 }
 
 .parent{
