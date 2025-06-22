@@ -6,7 +6,7 @@ const Counter1=({count,handleIncrement})=> {
     <div>
       
       <p>{count}</p>
-      <button onClick={handleIncrement}>Click</button>
+      <button onClick={handleIncrement}>Click</button> // UpdatedComponent HOC
     </div>
   )
 }

@@ -8,7 +8,7 @@ export default function CenterDiv() {
     <div className='parent'>
         <p style={{position:"absolute",margin:"-40px 0px 0px 30px",color:'white',fontWeight:"bold"}}>Parent</p>
         <div className='child'>
-         <p style={{position:"absolute",margin:"65px 0px 0px 80px",fontWeight:"bold"}}>Child</p>
+         <p style={{position:"absolute",margin:"65px 0px 0px 80px",fontWeight:"bold"}}>Child Div</p>
         </div>
     </div>
     </div>
