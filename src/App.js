@@ -18,17 +18,18 @@ import CenterDiv from './components/centerDiv';
 import Form from './components/customHooks/form';
 import Sedg from './components/s';
 import CountryStaes from './components/countryStaes';
+import AutoComplete from './components/autoCompleteSearch/search';
 function App() {
 
   const [count,setCount]= useState(1)
   return (
-    <div className='hcf'>
+    <div>
       {/* <div style={{display:"flex",justifyContent:"center"}}>
      <Counter/>
      </div>
      */}
      {/* <Users/>  */}
-     <div  className='contain'>
+     {/* <div  className='contain'>
      <div className='bbb'>
      <Lights/>
      </div>
@@ -105,7 +106,11 @@ function App() {
 <div className='bbb'>
 <CountryStaes/>
 </div>
-    </div>
+ 
+    </div> */}
+   <div>
+    <AutoComplete/>
+   </div>
     </div>
   );
 }
