@@ -1,5 +1,6 @@
 .searchTitle{
     text-align: center;
+    color: var(--text_color);
 }
 
 .serach-input{
@@ -26,7 +27,14 @@ input[type="search"]{
     flex-direction: column;
     align-items: left;
     padding: 6px;
+    font-weight: 400;
+    cursor: pointer;
+    color: gray;
 }
 .searchResult:hover{
     background-color: lightgray;
+    transition: ease 0.2s;
+    border-radius: 2px;
+    color: black;
+    
 }

@@ -1,35 +1,85 @@
-import logo from './logo.svg';
-import './App.css';
-import Counter from './components/counter';
-import Users from './components/users';
-import Lights from './components/lights';
-import List from './components/list';
-import Counter1 from './components/c';
-import Counter2 from './components/c1';
-import Data from './components/customHooks/data';
-import Countercustom1 from './components/customHooks/couter1'
-import Countercustom2 from './components/customHooks/counter2'
-import LiftingStateup from './components/liftingStateup';
+import logo from "./logo.svg";
+import "./App.css";
+import Counter from "./components/counter";
+import Users from "./components/users";
+import Lights from "./components/lights";
+import List from "./components/list";
+import Counter1 from "./components/c";
+import Counter2 from "./components/c1";
+import Data from "./components/customHooks/data";
+import Countercustom1 from "./components/customHooks/couter1";
+import Countercustom2 from "./components/customHooks/counter2";
+import LiftingStateup from "./components/liftingStateup";
 
-import { counterContet } from './components/context';
-import { useState } from 'react';
-import DisplayCount from './components/displayCount';
-import CenterDiv from './components/centerDiv';
-import Form from './components/customHooks/form';
-import Sedg from './components/s';
-import CountryStaes from './components/countryStaes';
-import AutoComplete from './components/autoCompleteSearch/search';
+import { counterContet } from "./components/context";
+import { useState } from "react";
+import DisplayCount from "./components/displayCount";
+import CenterDiv from "./components/centerDiv";
+import Form from "./components/customHooks/form";
+import Sedg from "./components/s";
+import CountryStaes from "./components/countryStaes";
+import AutoComplete from "./components/autoCompleteSearch/search";
+import StyleComp from "./components/styledComp/stylecomponent";
 function App() {
+  const [count, setCount] = useState(1);
 
-  const [count,setCount]= useState(1)
+  const savedTheme = localStorage.getItem("theme");
+  const [buttonText, setButtonText] = useState("Switch To Dark");
+  const setDarkMode = () => {
+    document.querySelector("body").setAttribute("data-theme", "dark");
+    localStorage.setItem("theme", "dark");
+  };
+
+  const setLightMode = () => {
+    document.querySelector("body").setAttribute("data-theme", "light");
+    localStorage.setItem("theme", "light");
+  };
+
+  if (savedTheme === "dark") {
+    setDarkMode();
+  } else {
+    setLightMode();
+  }
+
+  const toggleMode = (e) => {
+    const currentTheme = localStorage.getItem("theme");
+    if (currentTheme === "light") {
+      setButtonText("Switch To Light");
+      setDarkMode();
+    } else {
+      setLightMode();
+      setButtonText("Switch To Dark");
+    }
+  };
+
   return (
-    <div>
-      {/* <div style={{display:"flex",justifyContent:"center"}}>
+    <div className="toggles">
+      <div>
+        <AutoComplete />
+        <div>
+          <button onClick={toggleMode}>{buttonText}</button>
+        </div>
+      </div>
+      <div>
+        <StyleComp />
+      </div>
+    </div>
+  );
+}
+
+export default App;
+
+{
+  /* <div style={{display:"flex",justifyContent:"center"}}>
      <Counter/>
      </div>
-     */}
-     {/* <Users/>  */}
-     {/* <div  className='contain'>
+     */
+}
+{
+  /* <Users/>  */
+}
+{
+  /* <div  className='contain'>
      <div className='bbb'>
      <Lights/>
      </div>
@@ -107,12 +157,5 @@ function App() {
 <CountryStaes/>
 </div>
  
-    </div> */}
-   <div>
-    <AutoComplete/>
-   </div>
-    </div>
-  );
+    </div> */
 }
-
-export default App;

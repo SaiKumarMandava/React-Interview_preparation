@@ -1,3 +1,9 @@
+.toggles{
+  /* background-color: var(--background_color); */
+  --text_colr: var(--text_color);
+  
+}
+
 .contain{
   display: grid;
   grid-template-columns: repeat(3,1fr);
