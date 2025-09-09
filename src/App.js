@@ -20,6 +20,8 @@ import Sedg from "./components/s";
 import CountryStaes from "./components/countryStaes";
 import AutoComplete from "./components/autoCompleteSearch/search";
 import StyleComp from "./components/styledComp/stylecomponent";
+import Count from "./components/useReducer/count";
+import DataFetchUseReducer from "./components/useReducer/DataFetchUseReducer";
 function App() {
   const [count, setCount] = useState(1);
 
@@ -60,9 +62,11 @@ function App() {
           <button onClick={toggleMode}>{buttonText}</button>
         </div>
       </div>
-      <div>
+      {/* <div>
         <StyleComp />
-      </div>
+      </div> */}
+      <Count/>
+      <DataFetchUseReducer/>
     </div>
   );
 }
